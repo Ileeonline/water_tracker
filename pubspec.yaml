@@ -32,6 +32,9 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
+  google_nav_bar: ^5.0.6
+  iconsax: ^0.0.8
+  percent_indicator: ^4.2.3
   sizer: ^2.0.15
 
 dev_dependencies:

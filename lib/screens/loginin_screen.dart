@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:water_tracker/components/my_textfield.dart';
 import 'package:water_tracker/constants/constants.dart';
+import 'package:water_tracker/screens/forgot_password_screen.dart';
 import 'package:water_tracker/screens/signup_screen.dart';
 
 import '../components/my_button.dart';
@@ -83,11 +84,21 @@ class _LoginInScreenState extends State<LoginInScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        "Forgot password?",
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12.sp,
-                          color: kPrimaryColor,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (e) => const ForgotPasswordScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Forgot password?",
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12.sp,
+                            color: kPrimaryColor,
+                          ),
                         ),
                       ),
                     ],
@@ -95,7 +106,7 @@ class _LoginInScreenState extends State<LoginInScreen> {
                   halfSizedBox,
                   MyButton(
                     onTap: () {},
-                    btnTxt: "SignUp",
+                    btnTxt: "SignIn",
                   ),
                 ],
               ),
@@ -132,16 +143,18 @@ class _LoginInScreenState extends State<LoginInScreen> {
               ),
             ),
           ),
-          SizedBox(height: 1.h),
+          halfSizedBox,
           Text(
             "Or login with",
             style: GoogleFonts.montserrat(
               fontSize: 12.sp,
               fontWeight: FontWeight.normal,
-              color: Colors.black,
+              color: Colors.grey[700],
             ),
           ),
-          halfSizedBox,
+          SizedBox(
+            height: 2.h,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

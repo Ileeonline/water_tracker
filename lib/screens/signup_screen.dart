@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:water_tracker/components/my_button.dart';
+import 'package:water_tracker/screens/bottom_nav_bar.dart';
 import 'package:water_tracker/screens/loginin_screen.dart';
 
 import '../components/my_textfield.dart';
@@ -85,22 +86,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       hintText: "Enter your password",
                       icon: Icons.remove_red_eye_outlined,
                       obscureText: true),
-                  SizedBox(height: 1.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Forgot password?",
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12.sp,
-                          color: kPrimaryColor,
-                        ),
-                      ),
-                    ],
-                  ),
                   halfSizedBox,
                   MyButton(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (e) => const BottomNavBar(),
+                        ),
+                      );
+                    },
                     btnTxt: "SignUp",
                   ),
                 ],
@@ -138,13 +133,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
           ),
-          SizedBox(height: 1.h),
+          halfSizedBox,
           Text(
             "Or SignUp with",
             style: GoogleFonts.montserrat(
               fontSize: 12.sp,
               fontWeight: FontWeight.normal,
-              color: Colors.black,
+              color: Colors.grey[700],
             ),
           ),
           SizedBox(height: 2.h),

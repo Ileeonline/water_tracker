@@ -9,11 +9,17 @@ SizedBox sizedBox = SizedBox(
 SizedBox halfSizedBox = SizedBox(
   height: 5.h,
 );
+SizedBox smallSizedBox = SizedBox(
+  height: 2.5.h,
+);
 SizedBox widthSizedBox = SizedBox(
   width: 10.h,
 );
 SizedBox halfWidthSizedBox = SizedBox(
   width: 5.h,
+);
+SizedBox smallWidthSizedBox = SizedBox(
+  width: 2.5.h,
 );
 
 // bordar radius from here
