@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            sizedBox,
+            halfSizedBox,
             CircularPercentIndicator(
               radius: 70.sp,
               lineWidth: 20,
